@@ -81,5 +81,3 @@ function App() {
 }
 
 export default App;
-
-// pasoori1babe
