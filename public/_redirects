@@ -1,2 +1,3 @@
-/api/_ https://furnidence.herokuapp.com/api/:splat 200
-/_ /index.html 200
+/api/*  https://furnidence.herokuapp.com/api/:splat  200
+
+/* /index.html 200
