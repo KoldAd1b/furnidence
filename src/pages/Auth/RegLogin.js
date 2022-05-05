@@ -326,6 +326,9 @@ const Container = styled.div`
     top: 0;
     left: 0;
     text-align: center;
+    @media (max-width: 870px) {
+      z-index: 12;
+    }
   }
   .login-register {
     position: absolute;
@@ -430,7 +433,6 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     @media (max-width: 870px) {
-      z-index: 10;
       grid-template-columns: 1fr;
       grid-template-columns: 1fr 2fr 1fr;
     }
@@ -442,6 +444,7 @@ const Container = styled.div`
       justify-content: space-around;
       z-index: 7;
       @media (max-width: 870px) {
+        z-index: 20;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -468,6 +471,9 @@ const Container = styled.div`
         .image {
           transform: translate(800px);
           @media (max-width: 870px) {
+            h3 {
+              color: black;
+            }
             transform: translateY(300px);
           }
         }
@@ -513,6 +519,7 @@ const Container = styled.div`
         width: 110px;
         height: 35px;
         font-size: 0.7rem;
+        background-color: black;
       }
     }
   }
