@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "./components";
 
-import Modal from "./components/Modal";
+import { Modal } from "./components";
 import {
   Home,
   Checkout,
@@ -30,15 +30,18 @@ function App() {
 
   useEffect(() => {
     dispatch(getProducts());
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     dispatch(getUser());
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     dispatch(cartActions.calcCartTotals());
     localStorage.setItem("cart", JSON.stringify(cart));
+    // eslint-disable-next-line
   }, [cart]);
 
   return (

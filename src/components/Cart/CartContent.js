@@ -6,7 +6,7 @@ import CartColumns from "./CartColumns";
 import CartItem from "./CartItem";
 import CartTotals from "./CartTotals";
 import { useSelector } from "react-redux";
-import { cartActions } from "../store/cartSlice";
+import { cartActions } from "../../store/cartSlice";
 import { useDispatch } from "react-redux";
 
 const CartContent = () => {

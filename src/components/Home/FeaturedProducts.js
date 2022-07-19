@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "../Misc/Error";
+import Loading from "../Misc/Loading";
 import { useSelector } from "react-redux";
-import ProductCard from "./ProductCard";
+import ProductCard from "../Products/ProductCard";
 
 const FeaturedProducts = () => {
   const { loading, error } = useSelector((state) => state.UI);

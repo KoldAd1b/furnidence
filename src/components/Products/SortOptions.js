@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BsFillGridFill, BsList } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { filterActions } from "../store/filterSlice";
+import { filterActions } from "../../store/filterSlice";
 const SortOptions = () => {
   const { modifiedProducts, view, filters } = useSelector(
     (state) => state.filters
@@ -16,6 +16,7 @@ const SortOptions = () => {
 
   useEffect(() => {
     dispatch(filterActions.sortProducts(sortedValue));
+    // eslint-disable-next-line
   }, [sortedValue, modifiedProducts, filters]);
 
   return (

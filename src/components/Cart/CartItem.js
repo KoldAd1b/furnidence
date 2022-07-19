@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { formatPrice } from "../utils/helpers";
-import AmountButtons from "./AmountButtons";
+import { formatPrice } from "../../utils/helpers";
+import AmountButtons from "../Product/AmountButtons";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { cartActions } from "../store/cartSlice";
+import { cartActions } from "../../store/cartSlice";
 const CartItem = ({ _id, image, name, variant, price, amount }) => {
   // removeItem , changeAmount
   const dispatch = useDispatch();

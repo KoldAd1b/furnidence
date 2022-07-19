@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { formatPrice } from "../utils/helpers";
+import { formatPrice } from "../../utils/helpers";
 import { Link } from "react-router-dom";
 import { BsStarFill, BsStarHalf, BsStar, BsFillEyeFill } from "react-icons/bs";
 

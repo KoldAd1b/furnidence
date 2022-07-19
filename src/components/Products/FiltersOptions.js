@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { getUniqueValues, formatPrice } from "../utils/helpers";
+import { getUniqueValues, formatPrice } from "../../utils/helpers";
 import { FaCheck } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { filterActions } from "../store/filterSlice";
+import { filterActions } from "../../store/filterSlice";
 
 const FilterOptions = () => {
   const {
@@ -26,6 +26,7 @@ const FilterOptions = () => {
 
   useEffect(() => {
     dispatch(filterActions.executeFilters());
+    // eslint-disable-next-line
   }, [filterSelections]);
 
   const categories = getUniqueValues(allProducts, "category");

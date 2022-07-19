@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Loading } from ".";
+import Loading from "../Misc/Loading";
 
 const ProductImages = ({ images }) => {
   const [displayImage, setDisplayImage] = useState();

@@ -15,7 +15,7 @@ import styled from "styled-components";
 import { login, register } from "../../store/authActions";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Loading from "../../components/Loading";
+import Loading from "../../components/Misc/Loading";
 
 const initialValue = {
   name: "",

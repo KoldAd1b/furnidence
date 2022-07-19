@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Loading } from ".";
+import { Loading } from "..";
 import GridView from "./GridView";
 import ListView from "./ListView";
 

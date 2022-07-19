@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { single_product_url as url } from "../utils/constants";
 import { getSingleProduct } from "../store/productActions";
 import { formatPrice } from "../utils/helpers";
 import {
@@ -15,7 +14,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import ReviewSection from "../components/ReviewSection";
+import ReviewSection from "../components/Product/ReviewSection";
 import { getReviewsByProduct } from "../store/reviewActions";
 import { uiActions } from "../store/uiSlice";
 
@@ -30,6 +29,7 @@ const SingleProductPage = () => {
   useEffect(() => {
     dispatch(getSingleProduct(id));
     dispatch(getReviewsByProduct(id));
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -41,6 +41,7 @@ const SingleProductPage = () => {
     }, 3000);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line
   }, [error]);
 
   if (loading) return <Loading />;

@@ -3,9 +3,9 @@ import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../store/authActions";
+import { logout } from "../../store/authActions";
 import { useDispatch } from "react-redux";
-import { uiActions } from "../store/uiSlice";
+import { uiActions } from "../../store/uiSlice";
 import { useSelector } from "react-redux";
 
 const NavButtons = () => {

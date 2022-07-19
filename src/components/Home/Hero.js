@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
+import heroBcg from "../../assets/hero-bcg.jpeg";
 
 const Hero = () => {
   return (
     <Wrapper
       className="section-center"
       style={{
-        backgroundImage: "url(" + require("../assets/hero-bcg.jpg") + ")",
+        backgroundImage: "url(" + require("../../assets/hero-bcg.jpg") + ")",
       }}
     >
       <div className="overlay"></div>

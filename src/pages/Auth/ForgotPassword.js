@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BsEnvelopeFill } from "react-icons/bs";
-import WaveSvg from "../../components/WaveSvg";
+import WaveSvg from "../../components/Misc/WaveSvg";
 import { validateEmail } from "../../utils/validators";
 import { forgotPassword } from "../../store/authActions";
 import { useDispatch } from "react-redux";

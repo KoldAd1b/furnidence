@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import AmountButtons from "./AmountButtons";
 import { useDispatch } from "react-redux";
-import { cartActions } from "../store/cartSlice";
+import { cartActions } from "../../store/cartSlice";
 
 const AddToCart = ({ product }) => {
   const { _id, stock, variants } = product;

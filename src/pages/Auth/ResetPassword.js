@@ -4,7 +4,7 @@ import { BsFillKeyFill } from "react-icons/bs";
 import styled from "styled-components";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import WaveSvg from "../../components/WaveSvg";
+import WaveSvg from "../../components/Misc/WaveSvg";
 import { validatePassword, confirmPassword } from "../../utils/validators";
 import { useDispatch } from "react-redux";
 import { getUser, resetPassword } from "../../store/authActions";

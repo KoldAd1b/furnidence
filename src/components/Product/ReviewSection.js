@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import styled from "styled-components";
-import { reviewActions } from "../store/reviewSlice";
+import { reviewActions } from "../../store/reviewSlice";
 
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";

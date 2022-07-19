@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
-import userImage from "../assets/user-img.jpg";
-import { reviewActions } from "../store/reviewSlice";
+import userImage from "../../assets/user-img.jpg";
+import { reviewActions } from "../../store/reviewSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteReview } from "../store/reviewActions";
+import { deleteReview } from "../../store/reviewActions";
 
 const Review = (props) => {
   const {
@@ -14,13 +14,13 @@ const Review = (props) => {
     comment,
     _id: id,
     product,
-    user: { name: username, userId },
+    user: { name: username, _id: userId },
   } = props;
 
   const dispatch = useDispatch();
   const { user: currentUser } = useSelector((state) => state.auth);
 
-  const userCanModify = currentUser._id === userId;
+  const userCanModify = currentUser?._id === userId;
 
   const deleteHandler = () => {
     dispatch(deleteReview(id, product));

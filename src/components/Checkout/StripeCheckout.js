@@ -7,10 +7,10 @@ import {
 } from "@stripe/react-stripe-js";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
-import { formatPrice } from "../utils/helpers";
+import { formatPrice } from "../../utils/helpers";
 import { useDispatch, useSelector } from "react-redux";
-import { cartActions } from "../store/cartSlice";
-import { uiActions } from "../store/uiSlice";
+import { cartActions } from "../../store/cartSlice";
+import { uiActions } from "../../store/uiSlice";
 import { useNavigate } from "react-router-dom";
 
 const getOrderId = () => {
@@ -149,6 +149,9 @@ const CheckoutForm = () => {
           <p>Test Card Number: 4242 4242 4242 4242</p>
           <p>Enter a valid expiry date such as : 34/12</p>
           <p>Enter any valid three digit CVC</p>
+          <p style={{ textAlign: "center" }}>
+            (Note this will not work with adblock on)
+          </p>
         </article>
       )}
 

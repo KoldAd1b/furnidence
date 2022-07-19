@@ -1,14 +1,14 @@
 import React from "react";
-import logo from "../assets/loqo.svg";
+import logo from "../../assets/loqo.svg";
 import { Link } from "react-router-dom";
 
 import { FaTimes } from "react-icons/fa";
-import { links } from "../utils/constants";
+import { links } from "../../utils/constants";
 import styled from "styled-components";
 
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { uiActions } from "../store/uiSlice";
+import { uiActions } from "../../store/uiSlice";
 import NavButtons from "./NavButtons";
 
 const Sidebar = () => {

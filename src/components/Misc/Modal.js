@@ -4,7 +4,7 @@ import Backdrop from "./Backdrop";
 import React from "react";
 import ReactDOM from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { uiActions } from "../store/uiSlice";
+import { uiActions } from "../../store/uiSlice";
 
 const dropIn = {
   hidden: {

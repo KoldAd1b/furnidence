@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { addReview, updateReview } from "../store/reviewActions";
+import { addReview, updateReview } from "../../store/reviewActions";
 import { Link, useParams } from "react-router-dom";
-import { reviewActions } from "../store/reviewSlice";
+import { reviewActions } from "../../store/reviewSlice";
 
 const ReviewForm = () => {
   const { editing, reviewToEdit } = useSelector((state) => state.review);
@@ -22,6 +22,7 @@ const ReviewForm = () => {
       const { rating, title, comment } = reviewToEdit;
       setReview({ rating, title, comment });
     }
+    // eslint-disable-next-line
   }, []);
 
   const onChange = (e) => {

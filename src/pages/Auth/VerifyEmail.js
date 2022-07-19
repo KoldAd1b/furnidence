@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { Loading } from "../../components";
 import { useNavigate } from "react-router-dom";
-import WaveSvg from "../../components/WaveSvg";
+import WaveSvg from "../../components/Misc/WaveSvg";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { getUser, sendVerifyEmail, verifyEmail } from "../../store/authActions";
 import { validateEmail } from "../../utils/validators";
@@ -31,6 +31,7 @@ const VerifyEmail = () => {
       dispatch(verifyEmail(email, token));
       dispatch(getUser());
     }
+    // eslint-disable-next-line
   }, [user]);
 
   const handleSubmit = (e) => {

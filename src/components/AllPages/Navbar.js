@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/loqo.svg";
+import logo from "../../assets/loqo.svg";
 
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { links } from "../utils/constants";
+import { links } from "../../utils/constants";
 
-import { uiActions } from "../store/uiSlice";
+import { uiActions } from "../../store/uiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import NavButtons from "./NavButtons";
 

@@ -5,7 +5,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import axios from "axios";
 
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../store/uiSlice";
 
@@ -15,9 +15,6 @@ const setOrderId = (orderId) => {
 const getOrderId = () => {
   const orderId = localStorage.getItem("orderId");
   return JSON.parse(orderId);
-};
-const removeOrderId = () => {
-  localStorage.removeItem("orderId");
 };
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
@@ -44,6 +41,7 @@ const CheckoutPage = () => {
         dispatch(uiActions.setLoading(true));
         try {
           const { data } = await axios.get(`/api/v1/orders/${orderId}`);
+          console.log(data);
           setClientSecret(data.order.clientSecret);
         } catch (err) {
           dispatch(uiActions.setError(true));
@@ -58,6 +56,7 @@ const CheckoutPage = () => {
       };
       getOrder(getOrderId());
     }
+    // eslint-disable-next-line
   }, [hasRedirected]);
 
   // Store orderId in localStorage as sooon as the page renders
@@ -89,6 +88,7 @@ const CheckoutPage = () => {
     };
     if (!tax || !shippingFee) return;
     createOrder();
+    // eslint-disable-next-line
   }, [cartState]);
 
   const appearance = {
