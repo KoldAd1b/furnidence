@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import userImage from "../../assets/user-img.jpg";
@@ -19,8 +19,14 @@ const Review = (props) => {
 
   const dispatch = useDispatch();
   const { user: currentUser } = useSelector((state) => state.auth);
+  const currentUserId = currentUser?.id;
+  const [modifiable, setModifiable] = useState(false);
 
-  const userCanModify = currentUser?._id === userId;
+  useEffect(() => {
+    if (currentUserId) {
+      setModifiable(currentUserId === userId);
+    }
+  }, [currentUserId]);
 
   const deleteHandler = () => {
     dispatch(deleteReview(id, product));
@@ -76,7 +82,7 @@ const Review = (props) => {
         <p>{comment}</p>
       </div>
 
-      {userCanModify && (
+      {modifiable && (
         <div className="actions">
           <button className="btn delete" type="button" onClick={deleteHandler}>
             Delete
